@@ -2,10 +2,11 @@ spectaql:
   logoFile: ./assets/true-logo.svg
   faviconFile: ./assets/true-logo.svg
   displayAllServers: true
+  targetDir: docs
 
 introspection:
   removeTrailingPeriodFromDescriptions: false
-  url: http://localhost:3001/graphql
+  url: http://127.0.0.1:3001/graphql
   # dynamicExamplesProcessingModule: ./examples/customizations/examples
   queryNameStrategy: capitalizeFirst
   fieldExpansionDepth: 2
