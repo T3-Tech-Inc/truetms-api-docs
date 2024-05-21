@@ -1,0 +1,43 @@
+spectaql:
+  logoFile: ./assets/true-logo.svg
+  faviconFile: ./assets/true-logo.svg
+  displayAllServers: true
+
+introspection:
+  removeTrailingPeriodFromDescriptions: false
+  url: http://localhost:3001/graphql
+  # dynamicExamplesProcessingModule: ./examples/customizations/examples
+  queryNameStrategy: capitalizeFirst
+  fieldExpansionDepth: 2
+
+  spectaqlDirective:
+    enable: true
+
+extensions:
+  graphqlScalarExamples: true
+
+info:
+  title: TrueTMS API Reference
+  description: Welcome to the TrueTMS API Reference. This is a GraphQL API that allows you to interact with the TrueTMS platform. The API is available to partners and customers who have been granted access.
+  termsOfService: https://www.example.com/terms
+  contact:
+    name: API Support
+    url: http://www.example.com/support
+    email: contact@truetms.com
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  x-introItems:
+    - title: Authentication
+      file: ./content/authentication.md
+
+servers:
+  - url: https://beta-api.truetms.com/graphql
+    description: Beta
+  - url: https://api.truetms.com/graphql
+    description: Production
+    production: true
+    headers:
+      - name: Authorization
+        example: Bearer <YOUR_TOKEN_HERE>
+        comment: Token obtained from the OAuth2 flow
